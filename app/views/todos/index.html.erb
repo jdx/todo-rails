@@ -1,0 +1,9 @@
+<ul>
+  <% @todos.each do |todo| %>
+    <li><%= todo.title %></li>
+  <% end %>
+</ul>
+<%= form_for @new_todo do |f| %>
+  <%= f.text_field :title %>
+  <%= f.submit %>
+<% end %>
